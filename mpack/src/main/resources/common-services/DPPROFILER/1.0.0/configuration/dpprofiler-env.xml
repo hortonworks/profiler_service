@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!--
+  ~   HORTONWORKS DATAPLANE SERVICE AND ITS CONSTITUENT SERVICES
+  ~
+  ~   (c) 2016-2018 Hortonworks, Inc. All rights reserved.
+  ~
+  ~   This code is provided to you pursuant to your written agreement with Hortonworks, which may be the terms of the
+  ~   Affero General Public License version 3 (AGPLv3), or pursuant to a written agreement with a third party authorized
+  ~   to distribute this code.  If you do not have a written agreement with Hortonworks or with an authorized and
+  ~   properly licensed third party, you do not have any rights to this code.
+  ~
+  ~   If this code is provided to you under the terms of the AGPLv3:
+  ~   (A) HORTONWORKS PROVIDES THIS CODE TO YOU WITHOUT WARRANTIES OF ANY KIND;
+  ~   (B) HORTONWORKS DISCLAIMS ANY AND ALL EXPRESS AND IMPLIED WARRANTIES WITH RESPECT TO THIS CODE, INCLUDING BUT NOT
+  ~     LIMITED TO IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE;
+  ~   (C) HORTONWORKS IS NOT LIABLE TO YOU, AND WILL NOT DEFEND, INDEMNIFY, OR HOLD YOU HARMLESS FOR ANY CLAIMS ARISING
+  ~     FROM OR RELATED TO THE CODE; AND
+  ~   (D) WITH RESPECT TO YOUR EXERCISE OF ANY RIGHTS GRANTED TO YOU FOR THE CODE, HORTONWORKS IS NOT LIABLE FOR ANY
+  ~     DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO,
+  ~     DAMAGES RELATED TO LOST REVENUE, LOST PROFITS, LOSS OF INCOME, LOSS OF BUSINESS ADVANTAGE OR UNAVAILABILITY,
+  ~     OR LOSS OR CORRUPTION OF DATA.
+  -->
+
+<configuration>
+    <property>
+        <name>dpprofiler.pid.dir</name>
+        <value>/var/run/profiler_agent</value>
+        <description>Dir containing process ID file</description>
+        <value-attributes>
+            <type>directory</type>
+            <overridable>false</overridable>
+            <editable-only-at-install>true</editable-only-at-install>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.data.dir</name>
+        <value>/var/lib/profiler_agent</value>
+        <description>Data Directory</description>
+        <value-attributes>
+            <type>directory</type>
+            <overridable>false</overridable>
+            <editable-only-at-install>true</editable-only-at-install>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.user</name>
+        <value>dpprofiler</value>
+        <property-type>USER</property-type>
+        <description>User dataplane profiler daemon runs as</description>
+        <value-attributes>
+            <type>user</type>
+            <overridable>true</overridable>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.group</name>
+        <value>dpprofiler</value>
+        <property-type>GROUP</property-type>
+        <description>Dataplane profiler group</description>
+        <value-attributes>
+            <type>user</type>
+            <overridable>true</overridable>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.conf.dir</name>
+        <value>/etc/profiler_agent/conf</value>
+        <description>Dataplane Profiler Log dir</description>
+        <value-attributes>
+            <type>directory</type>
+            <overridable>false</overridable>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.log.dir</name>
+        <value>/var/log/profiler_agent</value>
+        <description>Dataplane Profiler Log dir</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.http.port</name>
+        <value>21900</value>
+        <description>Dataplane Profiler Http Port</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.kerberos.enabled</name>
+        <value>false</value>
+        <description>Kerberos Enabled</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.kerberos.principal</name>
+        <value/>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+        <description>Dp Profiler Kerberos Principal</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.kerberos.keytab</name>
+        <value/>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+        <description>Dp Profiler Kerberos Keytab</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+
+    <property>
+        <name>dpprofiler.spnego.kerberos.principal</name>
+        <value/>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+        <description>SPENGO Principal</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+
+    <property>
+        <name>dpprofiler.spnego.kerberos.keytab</name>
+        <value></value>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+        <description>SPNEGO Keytab</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+
+    <property>
+        <name>dpprofiler.kerberos.ticket.refresh.cron</name>
+        <value>00 00 0/6 * * ?</value>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+        <description>DP Profiler Kerberos ticket refresh cron</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+
+    <property>
+        <name>dpprofiler.kerberos.ticket.refresh.retry.allowed</name>
+        <value>5</value>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+        <description>DP Profiler Kerberos ticket refresh cron</description>
+        <on-ambari-upgrade add="true"/>
+    </property>
+
+    <property>
+        <name>logback.content</name>
+        <description>This is the content for logback.xml file</description>
+        <value>
+            &lt;configuration&gt;
+
+            &lt;conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" /&gt;
+
+            &lt;appender name="FILE" class="ch.qos.logback.core.FileAppender"&gt;
+            &lt;file&gt;{{dpprofiler_log_dir}}/application.log&lt;/file&gt;
+            &lt;encoder&gt;
+            &lt;pattern&gt;%date [%level] from %logger in %thread - %message%n%xException&lt;/pattern&gt;
+            &lt;/encoder&gt;
+            &lt;/appender&gt;
+
+            &lt;appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"&gt;
+            &lt;encoder&gt;
+            &lt;pattern&gt;%coloredLevel %logger{15} - %message%n%xException{10}&lt;/pattern&gt;
+            &lt;/encoder&gt;
+            &lt;/appender&gt;
+
+            &lt;appender name="ASYNCFILE" class="ch.qos.logback.classic.AsyncAppender"&gt;
+            &lt;appender-ref ref="FILE" /&gt;
+            &lt;/appender&gt;
+
+            &lt;appender name="ASYNCSTDOUT" class="ch.qos.logback.classic.AsyncAppender"&gt;
+            &lt;appender-ref ref="STDOUT" /&gt;
+            &lt;/appender&gt;
+
+            &lt;logger name="play" level="INFO" /&gt;
+            &lt;logger name="application" level="DEBUG" /&gt;
+
+            &lt;!-- Off these ones as they are annoying, and anyway we manage configuration ourselves --&gt;
+            &lt;logger name="com.avaje.ebean.config.PropertyMapLoader" level="OFF" /&gt;
+            &lt;logger name="com.avaje.ebeaninternal.server.core.XmlConfigLoader" level="OFF" /&gt;
+            &lt;logger name="com.avaje.ebeaninternal.server.lib.BackgroundThread" level="OFF" /&gt;
+            &lt;logger name="com.gargoylesoftware.htmlunit.javascript" level="OFF" /&gt;
+
+            &lt;root level="WARN"&gt;
+            &lt;appender-ref ref="ASYNCFILE" /&gt;
+            &lt;appender-ref ref="ASYNCSTDOUT" /&gt;
+            &lt;/root&gt;
+
+            &lt;/configuration&gt;
+        </value>
+        <on-ambari-upgrade add="true"/>
+    </property>
+</configuration>

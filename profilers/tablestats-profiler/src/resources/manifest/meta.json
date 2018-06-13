@@ -1,0 +1,23 @@
+{
+  "name": "hive_columnstats_profiler",
+  "description": "Hive Sensitive Info Profiler",
+  "version": "${version}",
+  "jobType": "Livy",
+  "assetType": "Hive",
+  "profilerConf": {
+    "proxyUser": "{{PROFILER_USER}}",
+    "file": "{{PROFILER_DIR}}/com.hortonworks.dataplane.tablestats-profiler-${version}.jar",
+    "className": "com.hortonworks.dataplane.profilers.tablestats.TableStatsProfiler",
+    "jars": [
+      "{{PROFILER_DIR}}/org.json4s.json4s-native_2.11-3.2.11.jar",
+      "{{PROFILER_DIR}}/org.apache.atlas.atlas-common-${atlasVersion}.jar",
+      "{{PROFILER_DIR}}/org.apache.atlas.atlas-typesystem-${atlasVersion}.jar",
+      "{{PROFILER_DIR}}/org.apache.atlas.atlas-intg-${atlasVersion}.jar",
+      "{{PROFILER_DIR}}/org.scalaj.scalaj-http_2.11-1.1.4.jar",
+      "{{PROFILER_DIR}}/ch.qos.logback.logback-classic-1.1.2.jar",
+      "{{PROFILER_DIR}}/com.typesafe.scala-logging.scala-logging_2.11-3.1.0.jar",
+      "{{PROFILER_DIR}}/com.hortonworks.dataplane.commons-${version}.jar"
+    ]
+  },
+  "user": "{{PROFILER_USER}}"
+}

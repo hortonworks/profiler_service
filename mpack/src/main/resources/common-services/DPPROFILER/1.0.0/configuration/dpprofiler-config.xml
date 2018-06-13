@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  ~   HORTONWORKS DATAPLANE SERVICE AND ITS CONSTITUENT SERVICES
+  ~
+  ~   (c) 2016-2018 Hortonworks, Inc. All rights reserved.
+  ~
+  ~   This code is provided to you pursuant to your written agreement with Hortonworks, which may be the terms of the
+  ~   Affero General Public License version 3 (AGPLv3), or pursuant to a written agreement with a third party authorized
+  ~   to distribute this code.  If you do not have a written agreement with Hortonworks or with an authorized and
+  ~   properly licensed third party, you do not have any rights to this code.
+  ~
+  ~   If this code is provided to you under the terms of the AGPLv3:
+  ~   (A) HORTONWORKS PROVIDES THIS CODE TO YOU WITHOUT WARRANTIES OF ANY KIND;
+  ~   (B) HORTONWORKS DISCLAIMS ANY AND ALL EXPRESS AND IMPLIED WARRANTIES WITH RESPECT TO THIS CODE, INCLUDING BUT NOT
+  ~     LIMITED TO IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE;
+  ~   (C) HORTONWORKS IS NOT LIABLE TO YOU, AND WILL NOT DEFEND, INDEMNIFY, OR HOLD YOU HARMLESS FOR ANY CLAIMS ARISING
+  ~     FROM OR RELATED TO THE CODE; AND
+  ~   (D) WITH RESPECT TO YOUR EXERCISE OF ANY RIGHTS GRANTED TO YOU FOR THE CODE, HORTONWORKS IS NOT LIABLE FOR ANY
+  ~     DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO,
+  ~     DAMAGES RELATED TO LOST REVENUE, LOST PROFITS, LOSS OF INCOME, LOSS OF BUSINESS ADVANTAGE OR UNAVAILABILITY,
+  ~     OR LOSS OR CORRUPTION OF DATA.
+  -->
+
+<configuration>
+    <property>
+        <name>dpprofiler.db.type</name>
+        <value>h2</value>
+        <display-name>DP Profiler Database</display-name>
+        <description>DP Profiler Server Database.</description>
+        <value-attributes>
+            <overridable>false</overridable>
+            <type>value-list</type>
+            <entries>
+                <entry>
+                    <value>h2</value>
+                    <label>H2</label>
+                </entry>
+                <entry>
+                    <value>mysql</value>
+                    <label>MySQL</label>
+                </entry>
+                <entry>
+                    <value>postgres</value>
+                    <label>POSTGRES</label>
+                </entry>
+            </entries>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.db.slick.driver</name>
+        <value>slick.driver.H2Driver$</value>
+        <display-name>Slick JDBC Driver Class</display-name>
+        <description>Dataplane Profiler Slick Database Driver</description>
+        <value-attributes>
+            <overridable>false</overridable>
+        </value-attributes>
+        <depends-on>
+            <property>
+                <name>dpprofiler.db.type</name>
+                <type>dpprofiler-config</type>
+            </property>
+        </depends-on>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.db.driver</name>
+        <value>org.h2.Driver</value>
+        <display-name>JDBC Driver Class</display-name>
+        <description>Dataplane Profiler Database Driver</description>
+        <value-attributes>
+            <overridable>false</overridable>
+        </value-attributes>
+        <depends-on>
+            <property>
+                <name>dpprofiler.db.type</name>
+                <type>dpprofiler-config</type>
+            </property>
+        </depends-on>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.db.database</name>
+        <value>profileragent</value>
+        <description>Database Name</description>
+        <display-name>Database Name</display-name>
+    </property>
+    <property>
+        <name>dpprofiler.db.host</name>
+        <value></value>
+        <description>Database Host</description>
+        <display-name>Database Host</display-name>
+    </property>
+    <property>
+        <name>dpprofiler.db.jdbc.url</name>
+        <value>jdbc:h2:/var/lib/profiler_agent/h2/profileragent;DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1</value>
+        <description>Database url</description>
+        <display-name>Database URL</display-name>
+        <value-attributes>
+            <overridable>false</overridable>
+        </value-attributes>
+        <depends-on>
+            <property>
+                <name>dpprofiler.db.database</name>
+                <type>dpprofiler-config</type>
+            </property>
+            <property>
+                <name>dpprofiler.db.host</name>
+                <type>dpprofiler-config</type>
+            </property>
+            <property>
+                <name>dpprofiler.db.type</name>
+                <type>dpprofiler-config</type>
+            </property>
+        </depends-on>
+        <on-ambari-upgrade add="false"/>
+    </property>
+    <property>
+        <name>dpprofiler.db.user</name>
+        <value>profileragent</value>
+        <description>Database Username</description>
+        <display-name>Database Username</display-name>
+    </property>
+    <property>
+        <name>dpprofiler.db.password</name>
+        <value/>
+        <property-type>PASSWORD</property-type>
+        <description>Database Password</description>
+        <display-name>Database Password</display-name>
+        <value-attributes>
+            <type>password</type>
+            <overridable>false</overridable>
+            <keystore>true</keystore>
+        </value-attributes>
+        <on-ambari-upgrade add="false"/>
+    </property>
+
+    <property>
+        <name>dpprofiler.spnego.cookie.name</name>
+        <value>dpprofiler.spnego.cookie</value>
+        <description>SPNEGO Cookie Name</description>
+        <display-name>SPNEGO Cookie Name</display-name>
+    </property>
+
+    <property>
+        <name>dpprofiler.spnego.signature.secret</name>
+        <value/>
+        <description>SPNEGO Signature Secret</description>
+        <display-name>SPNEGO Signature Secret</display-name>
+        <value-attributes>
+            <overridable>true</overridable>
+            <type>password</type>
+        </value-attributes>
+        <on-ambari-upgrade add="false"/>
+    </property>
+
+
+    <property>
+        <name>dpprofiler.profiler.autoregister</name>
+        <value>true</value>
+        <description>Autoregister profilers</description>
+        <display-name>Autoregister profilers</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.profiler.hdfs.dir</name>
+        <value>/apps/dpprofiler/profilers</value>
+        <description>Profilers Hdfs Dir</description>
+        <display-name>Profilers Hdfs Dir</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.profiler.dwh.dir</name>
+        <value>/user/dpprofiler/dwh</value>
+        <description>Profilers DWH Dir</description>
+        <display-name>Profilers DWH Dir</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.profiler.dir</name>
+        <value>/usr/dss/current/profilers</value>
+        <description>Profilers local Dir</description>
+        <display-name>Profilers local Dir</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.job.status.refresh.interval</name>
+        <value>15</value>
+        <description>Job Status Refresh</description>
+        <display-name>Job Status Refresh in seconds</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>livy.session.config</name>
+        <value>
+            session {
+                lifetime {
+                    minutes = 2880
+                    requests = 500
+                }
+                max.errors = 20
+                starting.message = "java.lang.IllegalStateException: Session is in state starting"
+                dead.message = "java.lang.IllegalStateException: Session is in state dead"
+                config {
+                    read {
+                        name = "dpprofiler-read"
+                         heartbeatTimeoutInSecond = 172800
+                         timeoutInSeconds = 90
+                     }
+                     write {
+                        name = "dpprofiler-write"
+                        heartbeatTimeoutInSecond = 172800
+                        timeoutInSeconds = 90
+                     }
+                }
+            }
+        </value>
+        <description>Livy Session Config</description>
+        <display-name>Livy Session Config</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.custom.config</name>
+        <property-type>TEXT</property-type>
+        <value>
+
+
+        </value>
+        <description>Custom configs</description>
+        <display-name>Custom Configs</display-name>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+            <type>multiLine</type>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.cluster.config.keys</name>
+        <value>atlasUrl=application-properties/atlas.rest.address;rangerAuditDir=ranger-env/xasecure.audit.destination.hdfs.dir;metastoreUrl=hive-site/hive.metastore.uris;metastoreKeytab=hive-site/hive.metastore.kerberos.keytab.file;metastorePrincipal=hive-site/hive.metastore.kerberos.principal</value>
+        <description>Cluster Configs</description>
+        <display-name>Cluster Configs</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.refreshtable.cron</name>
+        <value>0 0/30 * * * ?</value>
+        <description>Cron for Refresh table</description>
+        <display-name>Refresh table cron</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.refreshtable.retry</name>
+        <value>3</value>
+        <description>Refresh table retry</description>
+        <display-name>Refresh table retry</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.submitter.batch.size</name>
+        <value>50</value>
+        <description>Asset Batch size for Submitter Job</description>
+        <display-name>Submitter Batch Size</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.submitter.jobs.max</name>
+        <value>2</value>
+        <description>Submitter Max Jobs</description>
+        <display-name>Submitter Max Jobs</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.submitter.jobs.scan.seconds</name>
+        <value>30</value>
+        <description>Submitter Job Scan Time in Seconds</description>
+        <display-name>Submitter Job Scan Time</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.submitter.queue.size</name>
+        <value>500</value>
+        <description>Submitter Queue Size</description>
+        <display-name>Submitter Queue Size</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.sensitivepartitioned.metric.name</name>
+        <value>hivesensitivitypartitioned</value>
+        <description>Paritioned table location for sensitive tags</description>
+        <display-name>Paritioned table location for sensitive tags</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>dpprofiler.senstitive.metric.name</name>
+        <value>hivesensitivity</value>
+        <description>Table location for all sensitive tags</description>
+        <display-name>Paritioned table location for all sensitive tags</display-name>
+        <on-ambari-upgrade add="true"/>
+    </property>
+</configuration>

@@ -1,0 +1,18 @@
+{
+  "name": "sensitive_info_profiler",
+  "description": "Hive Sensitive Info Profiler",
+  "version": "${version}",
+  "jobType": "Livy",
+  "assetType": "Hive",
+  "profilerConf": {
+    "proxyUser": "{{PROFILER_USER}}",
+    "file": "{{PROFILER_DIR}}/com.hortonworks.dataplane.sensitive-info-profiler-assembly-${version}.jar",
+    "className": "com.hortonworks.dataplane.profilers.SensitiveProfilerApp",
+    "jars": [],
+    "files": [
+      "{{PROFILER_DIR}}/keywords.json",
+      "{{PROFILER_DIR}}/labelstore.json"
+    ]
+  },
+  "user": "{{PROFILER_USER}}"
+}

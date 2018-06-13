@@ -1,0 +1,14 @@
+{
+  "name": "audit_profiler",
+  "description": "Audit Profiler",
+  "version": "${version}",
+  "jobType": "Livy",
+  "assetType": "AuditLog",
+  "profilerConf": {
+    "file": "{{PROFILER_DIR}}/com.hortonworks.dataplane.audit-profiler-${version}.jar",
+    "proxyUser": "{{PROFILER_USER}}",
+    "className": "com.hortonworks.dataplane.profilers.auditprofiler.AuditProfiler",
+    "jars": []
+  },
+  "user" : "{{PROFILER_USER}}"
+}
