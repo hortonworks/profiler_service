@@ -1,0 +1,10 @@
+{
+  "groupName": "group2",
+  "behaviours": [
+    {
+      "name": "regex_map",
+      "definition": "token matches configs.head._2",
+      "configurationType": "map"
+    }
+  ]
+}

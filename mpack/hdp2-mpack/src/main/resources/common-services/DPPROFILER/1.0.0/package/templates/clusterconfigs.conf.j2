@@ -1,0 +1,21 @@
+clusterconfigs {
+ clusterName = {{ambari_cluster_name}}
+ assetMetricsPath = {{dpprofiler_profiler_dwh_dir}}
+
+ atlasUser = {{atlas_username}}
+ {% if credential_store_enabled %}
+ atlasPassword = "{{atlas_password_alias}}"
+ {% endif %}
+ {% if not credential_store_enabled %}
+ atlasPassword = "{{atlas_password}}"
+ {% endif %}
+ credential.provider.path = "{{dpprofiler_credential_provider_hdfs_path}}"
+ credential.store.enabled = {{credential_store_enabled | lower}}
+
+  sparkConfigurations {
+     {{dpprofiler_spark_cluster_configs}}
+     hive.metastore.sasl.enabled = true
+  }
+
+ {{dpprofiler_cluster_configs}}
+}

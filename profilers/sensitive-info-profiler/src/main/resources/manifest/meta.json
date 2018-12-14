@@ -1,0 +1,40 @@
+{
+  "name": "sensitive_info_profiler",
+  "description": "Hive Sensitive Info Profiler",
+  "version": "${version}",
+  "jobType": "Livy",
+  "assetType": "Hive",
+  "profilerConf": {
+    "proxyUser": "{{PROFILER_USER}}",
+    "file": "{{PROFILER_DIR}}/com.hortonworks.dataplane.sensitive-info-profiler-assembly-${version}.jar",
+    "className": "com.hortonworks.dataplane.profilers.SensitiveProfilerApp",
+    "jars": [],
+    "files": [
+    ]
+  },
+  "user": "{{PROFILER_USER}}",
+  "metaManagementSchema": {
+    "rootPath": "{{PROFILER_DIR}}/kraptr",
+    "metaConfigs": [
+      {
+        "id": "dsl",
+        "metaType": "instance",
+        "nodeName": "dsl",
+        "fileType": "json",
+        "extension": ".kraptr_dsl.json",
+        "permission": "create"
+      },
+      {
+        "id": "files",
+        "metaType": "global",
+        "nodeName": "files",
+        "fileType": "text",
+        "extension": ".kraptr_meta_files.txt",
+        "permission": "create"
+      }
+    ]
+  },
+  "dryRunSchema": {
+    "outputPath": "{{PROFILER_DIR}}/dryrun"
+  }
+}

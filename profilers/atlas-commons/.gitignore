@@ -1,0 +1,6 @@
+/RUNNING_PID
+/logs/
+/project/*-shim.sbt
+/project/project/
+/project/target/
+/profilers/atlas-commons/target/

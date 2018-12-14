@@ -1,0 +1,22 @@
+{
+  "name": "hive_metastore_profiler",
+  "description": "Hive Metastore Profiler",
+  "version": "${version}",
+  "jobType": "Livy",
+  "assetType": "Hive",
+  "profilerConf": {
+    "proxyUser": "{{PROFILER_USER}}",
+    "file": "{{PROFILER_DIR}}/com.hortonworks.dataplane.hive-metastore-profiler-${version}.jar",
+    "className": "com.hortonworks.dataplane.profilers.MetadataProfiler",
+    "jars": [
+      "{{PROFILER_DIR}}/org.json4s.json4s-native_2.11-3.2.11.jar",
+      "{{PROFILER_DIR}}/ch.qos.logback.logback-classic-1.1.2.jar",
+      "{{PROFILER_DIR}}/com.typesafe.scala-logging.scala-logging_2.11-3.1.0.jar",
+      "{{PROFILER_DIR}}/com.hortonworks.dataplane.commons-${version}.jar",
+      "{{PROFILER_DIR}}/com.hortonworks.dataplane.profiler-commons-${version}.jar",
+      "{{PROFILER_DIR}}/com.hortonworks.dataplane.hdp-interfaces-${hdpInterfaceVersion}.jar",
+      "{{PROFILER_DIR}}/com.hortonworks.dataplane.hdp-interface-definition-0.1.jar"
+    ]
+  },
+  "user": "{{PROFILER_USER}}"
+}

@@ -1,0 +1,591 @@
+{
+  "referredEntities": {
+    "3168502c-1cfa-4b0c-adf0-25057fd2bdd6": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.ip@cl1",
+        "name": "ip",
+        "description": null,
+        "comment": null,
+        "position": 4,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 1.1447010356171041,
+            "minDate": 0,
+            "lengthMaxValue": 15,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 339,
+            "histogram": "[{\"bin\":\"231.90.94.45\",\"count\":1},{\"bin\":\"199.217.252.136\",\"count\":1},{\"bin\":\"37.78.184.71\",\"count\":1},{\"bin\":\"73.79.27.73\",\"count\":1},{\"bin\":\"103.27.112.106\",\"count\":1},{\"bin\":\"215.146.249.209\",\"count\":1},{\"bin\":\"66.251.33.197\",\"count\":1},{\"bin\":\"19.247.241.91\",\"count\":1},{\"bin\":\"194.17.185.170\",\"count\":1},{\"bin\":\"211.89.113.41\",\"count\":1},{\"bin\":\"55.141.101.86\",\"count\":1},{\"bin\":\"41.183.177.58\",\"count\":1},{\"bin\":\"195.115.155.206\",\"count\":1},{\"bin\":\"114.228.180.199\",\"count\":1},{\"bin\":\"113.83.98.57\",\"count\":1},{\"bin\":\"138.147.28.236\",\"count\":1},{\"bin\":\"70.254.165.219\",\"count\":1},{\"bin\":\"170.200.74.132\",\"count\":1},{\"bin\":\"31.239.77.66\",\"count\":1},{\"bin\":\"99.255.163.83\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 9,
+            "lengthMeanValue": 13.363363363363364,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[19.247.241.91,215.146.249.209,73.79.27.73,66.251.33.197,37.78.184.71,231.90.94.45,194.17.185.170,103.27.112.106,199.217.252.136,211.89.113.41,113.83.98.57,170.200.74.132,41.183.177.58,31.239.77.66,55.141.101.86,195.115.155.206,138.147.28.236,70.254.165.219,114.228.180.199,99.255.163.83]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "3168502c-1cfa-4b0c-adf0-25057fd2bdd6",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768215,
+      "version": 0,
+      "classifications": []
+    },
+    "004718d9-e222-40e5-a4a3-2ccd93acddc0": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.email@cl1",
+        "name": "email",
+        "description": null,
+        "comment": null,
+        "position": 3,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 4.160039231586169,
+            "minDate": 0,
+            "lengthMaxValue": 25,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 328,
+            "histogram": "[{\"bin\":\"fsg@w.sfd\",\"count\":1},{\"bin\":\"awqvrndj@f.pwu\",\"count\":1},{\"bin\":\"tcwfuvld@jkg.hvi\",\"count\":1},{\"bin\":\"mxolht@refpxoyzu.xuo\",\"count\":1},{\"bin\":\"hv@o.ftp\",\"count\":1},{\"bin\":\"ui@gndqjlh.ema\",\"count\":1},{\"bin\":\"ip@qusj.rlc\",\"count\":1},{\"bin\":\"ke@vbipenjsmc.gqp\",\"count\":1},{\"bin\":\"javpmih@cbyn.nfr\",\"count\":1},{\"bin\":\"xgsrialn@xrja.mof\",\"count\":1},{\"bin\":\"ziufjewyq@r.mjq\",\"count\":1},{\"bin\":\"yz@by.oul\",\"count\":1},{\"bin\":\"kvq@izawhptuo.lsh\",\"count\":1},{\"bin\":\"jxset@rjdfonxy.zax\",\"count\":1},{\"bin\":\"yt@v.zsd\",\"count\":1},{\"bin\":\"dlzbpcnyh@lkhqpyeo.krv\",\"count\":1},{\"bin\":\"rwxbipoqj@xfypohlke.ivy\",\"count\":1},{\"bin\":\"cwqlgsuzmr@nblmuvi.vth\",\"count\":1},{\"bin\":\"na@mkc.lxq\",\"count\":1},{\"bin\":\"pubzdhtvr@hdpt.uct\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 7,
+            "lengthMeanValue": 16.036036036036037,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[fsg@w.sfd,tcwfuvld@jkg.hvi,awqvrndj@f.pwu,hv@o.ftp,ui@gndqjlh.ema,mxolht@refpxoyzu.xuo,ke@vbipenjsmc.gqp,javpmih@cbyn.nfr,ip@qusj.rlc,xgsrialn@xrja.mof,ziufjewyq@r.mjq,yz@by.oul,yt@v.zsd,kvq@izawhptuo.lsh,jxset@rjdfonxy.zax,cwqlgsuzmr@nblmuvi.vth,rwxbipoqj@xfypohlke.ivy,dlzbpcnyh@lkhqpyeo.krv,na@mkc.lxq,pubzdhtvr@hdpt.uct]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "004718d9-e222-40e5-a4a3-2ccd93acddc0",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768333,
+      "version": 0,
+      "classifications": []
+    },
+    "16289b16-853c-45a6-829b-49be9719123c": {
+      "typeName": "hive_storagedesc",
+      "attributes": {
+        "bucketCols": null,
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii@cl1_storage",
+        "sortCols": null,
+        "storedAsSubDirectories": false,
+        "location": "hdfs://ctr-e138-1518143905142-297295-01-000003.hwx.site:8020/apps/hive/warehouse/test_dss_hive_table_qzzjr_pii",
+        "compressed": false,
+        "inputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+        "outputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+        "parameters": null,
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        },
+        "serdeInfo": {
+          "typeName": "hive_serde",
+          "attributes": {
+            "serializationLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+            "name": null,
+            "parameters": {
+              "serialization.format": ",",
+              "field.delim": ","
+            }
+          }
+        },
+        "numBuckets": -1
+      },
+      "guid": "16289b16-853c-45a6-829b-49be9719123c",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "hrt_qa",
+      "createTime": 1525885416966,
+      "updateTime": 1525885416966,
+      "version": 0,
+      "classifications": []
+    },
+    "129127cb-9da8-4ab6-b184-9a752ddc8123": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.san@cl1",
+        "name": "san",
+        "description": null,
+        "comment": null,
+        "position": 1,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 8.895110212292718e-16,
+            "minDate": 0,
+            "lengthMaxValue": 11,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 355,
+            "histogram": "[{\"bin\":\"648-51-5176\",\"count\":1},{\"bin\":\"264-26-6979\",\"count\":1},{\"bin\":\"657-37-2508\",\"count\":1},{\"bin\":\"961-74-7694\",\"count\":1},{\"bin\":\"389-10-2077\",\"count\":1},{\"bin\":\"556-56-8661\",\"count\":1},{\"bin\":\"621-10-6429\",\"count\":1},{\"bin\":\"846-40-1141\",\"count\":1},{\"bin\":\"315-96-9733\",\"count\":1},{\"bin\":\"243-66-2797\",\"count\":1},{\"bin\":\"480-21-2246\",\"count\":1},{\"bin\":\"540-22-6528\",\"count\":1},{\"bin\":\"205-46-4631\",\"count\":1},{\"bin\":\"582-87-5013\",\"count\":1},{\"bin\":\"200-27-8899\",\"count\":1},{\"bin\":\"793-15-7833\",\"count\":1},{\"bin\":\"212-67-6995\",\"count\":1},{\"bin\":\"365-88-9585\",\"count\":1},{\"bin\":\"832-55-8394\",\"count\":1},{\"bin\":\"892-30-8139\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 11,
+            "lengthMeanValue": 11,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[264-26-6979,648-51-5176,389-10-2077,657-37-2508,961-74-7694,621-10-6429,556-56-8661,846-40-1141,243-66-2797,315-96-9733,480-21-2246,205-46-4631,540-22-6528,582-87-5013,200-27-8899,365-88-9585,793-15-7833,212-67-6995,832-55-8394,892-30-8139]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "129127cb-9da8-4ab6-b184-9a752ddc8123",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768631,
+      "version": 0,
+      "classifications": []
+    },
+    "6b9c585e-db42-40d6-9c06-3a7afa3dc6b9": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.credit_card@cl1",
+        "name": "credit_card",
+        "description": null,
+        "comment": null,
+        "position": 6,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 0,
+            "minDate": 0,
+            "lengthMaxValue": 19,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 345,
+            "histogram": "[{\"bin\":\"5600-5950-7589-5614\",\"count\":1},{\"bin\":\"7080-7432-6416-7594\",\"count\":1},{\"bin\":\"8070-7890-7549-8127\",\"count\":1},{\"bin\":\"9432-4642-2410-9891\",\"count\":1},{\"bin\":\"2310-6043-7658-2023\",\"count\":1},{\"bin\":\"7917-6712-9189-1405\",\"count\":1},{\"bin\":\"1930-7869-4220-2437\",\"count\":1},{\"bin\":\"2714-4761-7947-4045\",\"count\":1},{\"bin\":\"1176-7311-9976-5525\",\"count\":1},{\"bin\":\"9423-6782-8153-4693\",\"count\":1},{\"bin\":\"1402-9520-7209-8309\",\"count\":1},{\"bin\":\"6437-8623-4065-6909\",\"count\":1},{\"bin\":\"8703-1463-8804-8271\",\"count\":1},{\"bin\":\"4160-9416-5796-5515\",\"count\":1},{\"bin\":\"8096-5292-6040-8507\",\"count\":1},{\"bin\":\"7829-9356-1305-9966\",\"count\":1},{\"bin\":\"5549-7841-6785-2598\",\"count\":1},{\"bin\":\"9314-9218-3379-2475\",\"count\":1},{\"bin\":\"2817-5076-1924-6914\",\"count\":1},{\"bin\":\"3471-1109-5199-4803\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 19,
+            "lengthMeanValue": 19,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[5600-5950-7589-5614,7080-7432-6416-7594,1930-7869-4220-2437,2310-6043-7658-2023,7917-6712-9189-1405,8070-7890-7549-8127,9432-4642-2410-9891,8703-1463-8804-8271,4160-9416-5796-5515,2714-4761-7947-4045,1176-7311-9976-5525,1402-9520-7209-8309,9423-6782-8153-4693,6437-8623-4065-6909,7829-9356-1305-9966,8096-5292-6040-8507,2817-5076-1924-6914,5549-7841-6785-2598,9314-9218-3379-2475,3471-1109-5199-4803]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "6b9c585e-db42-40d6-9c06-3a7afa3dc6b9",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768425,
+      "version": 0,
+      "classifications": []
+    },
+    "5fcf604d-3708-4a2f-b151-8474edd48342": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.name@cl1",
+        "name": "name",
+        "description": null,
+        "comment": null,
+        "position": 0,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 2.2937202791500195,
+            "minDate": 0,
+            "lengthMaxValue": 21,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 343,
+            "histogram": "[{\"bin\":\"Buck Emmerich\",\"count\":1},{\"bin\":\"Concepcion Littel\",\"count\":1},{\"bin\":\"Gustavo O'Hara\",\"count\":1},{\"bin\":\"Iraida Tillman\",\"count\":1},{\"bin\":\"Elvin Mayert\",\"count\":1},{\"bin\":\"Dan Morar\",\"count\":1},{\"bin\":\"Antonette Bogan\",\"count\":1},{\"bin\":\"Rhonda Runolfsson\",\"count\":1},{\"bin\":\"Patty Langosh\",\"count\":1},{\"bin\":\"Dario Eichmann\",\"count\":1},{\"bin\":\"Williams D'Amore\",\"count\":1},{\"bin\":\"Sherley Sporer\",\"count\":1},{\"bin\":\"Hoyt Kulas\",\"count\":1},{\"bin\":\"Carson Jacobi\",\"count\":1},{\"bin\":\"Hollie Larkin\",\"count\":1},{\"bin\":\"Lavonna Tromp\",\"count\":1},{\"bin\":\"Kendall Littel\",\"count\":1},{\"bin\":\"Maurice Morissette\",\"count\":1},{\"bin\":\"Jeremy Cronin\",\"count\":1},{\"bin\":\"Columbus Schuppe\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 8,
+            "lengthMeanValue": 13.45945945945946,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[Concepcion Littel,Buck Emmerich,Iraida Tillman,Gustavo O'Hara,Williams D'Amore,Rhonda Runolfsson,Dario Eichmann,Dan Morar,Patty Langosh,Elvin Mayert,Sherley Sporer,Antonette Bogan,Carson Jacobi,Hollie Larkin,Hoyt Kulas,Kendall Littel,Lavonna Tromp,Maurice Morissette,Jeremy Cronin,Columbus Schuppe]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "5fcf604d-3708-4a2f-b151-8474edd48342",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768101,
+      "version": 0,
+      "classifications": []
+    },
+    "3051f071-fd49-4216-8909-50a602d51208": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.lat@cl1",
+        "name": "lat",
+        "description": null,
+        "comment": null,
+        "position": 7,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 0.5873375923394363,
+            "minDate": 0,
+            "lengthMaxValue": 11,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 335,
+            "histogram": "[{\"bin\":\"32.7751455\",\"count\":1},{\"bin\":\"-47.0008713\",\"count\":1},{\"bin\":\"81.4312947\",\"count\":1},{\"bin\":\"33.8132653\",\"count\":1},{\"bin\":\"-88.6989471\",\"count\":1},{\"bin\":\"-60.3959172\",\"count\":1},{\"bin\":\"-71.9683401\",\"count\":1},{\"bin\":\"-57.8849762\",\"count\":1},{\"bin\":\"-64.8121112\",\"count\":1},{\"bin\":\"-69.8327194\",\"count\":1},{\"bin\":\"0.2997153\",\"count\":1},{\"bin\":\"-22.3877908\",\"count\":1},{\"bin\":\"84.3381646\",\"count\":1},{\"bin\":\"-15.1576718\",\"count\":1},{\"bin\":\"67.9952097\",\"count\":1},{\"bin\":\"30.1547175\",\"count\":1},{\"bin\":\"-21.0023858\",\"count\":1},{\"bin\":\"62.1778662\",\"count\":1},{\"bin\":\"-48.6513789\",\"count\":1},{\"bin\":\"-82.8477085\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 9,
+            "lengthMeanValue": 10.453453453453454,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[32.7751455,33.8132653,81.4312947,-60.3959172,-47.0008713,-88.6989471,-71.9683401,-64.8121112,-22.3877908,-57.8849762,-69.8327194,0.2997153,84.3381646,-21.0023858,-15.1576718,62.1778662,67.9952097,30.1547175,-48.6513789,-82.8477085]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "3051f071-fd49-4216-8909-50a602d51208",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768857,
+      "version": 0,
+      "classifications": []
+    },
+    "da8ad43c-c957-409b-9e5a-e373519e9b8f": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.lon@cl1",
+        "name": "lon",
+        "description": null,
+        "comment": null,
+        "position": 8,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 0.7622867446578627,
+            "minDate": 0,
+            "lengthMaxValue": 12,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 324,
+            "histogram": "[{\"bin\":\"158.2786995\",\"count\":1},{\"bin\":\"148.4953793\",\"count\":1},{\"bin\":\"-124.2626628\",\"count\":1},{\"bin\":\"-105.1814551\",\"count\":1},{\"bin\":\"0.8194931\",\"count\":1},{\"bin\":\"65.6063940\",\"count\":1},{\"bin\":\"84.7167739\",\"count\":1},{\"bin\":\"-57.7086722\",\"count\":1},{\"bin\":\"-21.4825490\",\"count\":1},{\"bin\":\"-133.6705478\",\"count\":1},{\"bin\":\"85.9804184\",\"count\":1},{\"bin\":\"140.9176811\",\"count\":1},{\"bin\":\"-12.8023416\",\"count\":1},{\"bin\":\"179.3416727\",\"count\":1},{\"bin\":\"160.9981736\",\"count\":1},{\"bin\":\"-91.4261232\",\"count\":1},{\"bin\":\"123.6054740\",\"count\":1},{\"bin\":\"43.9873601\",\"count\":1},{\"bin\":\"114.0561705\",\"count\":1},{\"bin\":\"18.3855960\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 9,
+            "lengthMeanValue": 10.864864864864865,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[158.2786995,-124.2626628,-105.1814551,148.4953793,65.6063940,0.8194931,-21.4825490,84.7167739,-57.7086722,85.9804184,140.9176811,160.9981736,-133.6705478,179.3416727,-12.8023416,123.6054740,43.9873601,-91.4261232,18.3855960,114.0561705]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "da8ad43c-c957-409b-9e5a-e373519e9b8f",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768752,
+      "version": 0,
+      "classifications": []
+    },
+    "abff64e9-410d-4be0-a374-7b259865be31": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.dob@cl1",
+        "name": "dob",
+        "description": null,
+        "comment": null,
+        "position": 2,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 0,
+            "minDate": 0,
+            "lengthMaxValue": 10,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 330,
+            "histogram": "[{\"bin\":\"1912-08-11\",\"count\":1},{\"bin\":\"2003-12-21\",\"count\":1},{\"bin\":\"1977-04-11\",\"count\":1},{\"bin\":\"1902-03-22\",\"count\":1},{\"bin\":\"1942-02-24\",\"count\":1},{\"bin\":\"1939-04-27\",\"count\":1},{\"bin\":\"1959-09-30\",\"count\":1},{\"bin\":\"1986-04-14\",\"count\":1},{\"bin\":\"1963-06-18\",\"count\":1},{\"bin\":\"1931-02-28\",\"count\":1},{\"bin\":\"1905-09-22\",\"count\":1},{\"bin\":\"1995-01-31\",\"count\":1},{\"bin\":\"1994-01-26\",\"count\":1},{\"bin\":\"1915-02-05\",\"count\":1},{\"bin\":\"1916-02-25\",\"count\":1},{\"bin\":\"2009-07-07\",\"count\":1},{\"bin\":\"1948-12-25\",\"count\":1},{\"bin\":\"1953-12-29\",\"count\":1},{\"bin\":\"1908-02-12\",\"count\":1},{\"bin\":\"1959-09-27\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 10,
+            "lengthMeanValue": 10,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[2003-12-21,1912-08-11,1977-04-11,1902-03-22,1942-02-24,1939-04-27,1959-09-30,1963-06-18,1905-09-22,1986-04-14,1931-02-28,1995-01-31,2009-07-07,1916-02-25,1994-01-26,1915-02-05,1948-12-25,1953-12-29,1908-02-12,1959-09-27]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "abff64e9-410d-4be0-a374-7b259865be31",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768519,
+      "version": 0,
+      "classifications": []
+    },
+    "a2d0a066-e4d1-4ccd-a3f5-2e7492c9c11d": {
+      "typeName": "hive_column",
+      "attributes": {
+        "owner": "hrt_qa",
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii.phone@cl1",
+        "name": "phone",
+        "description": null,
+        "comment": null,
+        "position": 5,
+        "type": "string",
+        "profileData": {
+          "typeName": "dss_hive_column_profile_data",
+          "attributes": {
+            "stdDeviation": 0,
+            "lengthStdDeviation": 0,
+            "minDate": 0,
+            "lengthMaxValue": 10,
+            "locationKeyword": null,
+            "maxValue": 0,
+            "quartiles": null,
+            "numTrue": 0,
+            "medianValue": 0,
+            "cardinality": 324,
+            "histogram": "[{\"bin\":\"5169382341\",\"count\":1},{\"bin\":\"2934266857\",\"count\":1},{\"bin\":\"5186574681\",\"count\":1},{\"bin\":\"9232967394\",\"count\":1},{\"bin\":\"5248956925\",\"count\":1},{\"bin\":\"1932878197\",\"count\":1},{\"bin\":\"2571956591\",\"count\":1},{\"bin\":\"6129535846\",\"count\":1},{\"bin\":\"6399316421\",\"count\":1},{\"bin\":\"8144517984\",\"count\":1},{\"bin\":\"7845915412\",\"count\":1},{\"bin\":\"1835139835\",\"count\":1},{\"bin\":\"6755834913\",\"count\":1},{\"bin\":\"1576872597\",\"count\":1},{\"bin\":\"1238917836\",\"count\":1},{\"bin\":\"7235434863\",\"count\":1},{\"bin\":\"9844127921\",\"count\":1},{\"bin\":\"9416738532\",\"count\":1},{\"bin\":\"6191748275\",\"count\":1},{\"bin\":\"3916949632\",\"count\":1}]",
+            "minValue": 0,
+            "lengthMinValue": 10,
+            "lengthMeanValue": 10,
+            "locationAggregateData": null,
+            "lengthMedianValue": 0,
+            "meanValue": 0,
+            "nonNullCount": 333,
+            "maxDate": 0,
+            "numFalse": 0,
+            "frequentItems": "[5169382341,1932878197,5186574681,5248956925,9232967394,2571956591,2934266857,6129535846,6399316421,1576872597,6755834913,7845915412,8144517984,1835139835,9844127921,7235434863,1238917836,6191748275,3916949632,9416738532]"
+          }
+        },
+        "table": {
+          "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+          "typeName": "hive_table"
+        }
+      },
+      "guid": "a2d0a066-e4d1-4ccd-a3f5-2e7492c9c11d",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886768976,
+      "version": 0,
+      "classifications": []
+    }
+  },
+  "entities": [
+    {
+      "typeName": "hive_table",
+      "attributes": {
+        "owner": "hrt_qa",
+        "temporary": false,
+        "lastAccessTime": 1525885416000,
+        "aliases": null,
+        "qualifiedName": "default.test_dss_hive_table_qzzjr_pii@cl1",
+        "columns": [
+          {
+            "guid": "5fcf604d-3708-4a2f-b151-8474edd48342",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "129127cb-9da8-4ab6-b184-9a752ddc8123",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "abff64e9-410d-4be0-a374-7b259865be31",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "004718d9-e222-40e5-a4a3-2ccd93acddc0",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "3168502c-1cfa-4b0c-adf0-25057fd2bdd6",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "a2d0a066-e4d1-4ccd-a3f5-2e7492c9c11d",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "6b9c585e-db42-40d6-9c06-3a7afa3dc6b9",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "3051f071-fd49-4216-8909-50a602d51208",
+            "typeName": "hive_column"
+          },
+          {
+            "guid": "da8ad43c-c957-409b-9e5a-e373519e9b8f",
+            "typeName": "hive_column"
+          }
+        ],
+        "description": null,
+        "viewExpandedText": null,
+        "sd": {
+          "guid": "16289b16-853c-45a6-829b-49be9719123c",
+          "typeName": "hive_storagedesc"
+        },
+        "tableType": "MANAGED_TABLE",
+        "createTime": 1525885416000,
+        "name": "test_dss_hive_table_qzzjr_pii",
+        "comment": null,
+        "partitionKeys": null,
+        "profileData": {
+          "typeName": "dss_hive_table_profile_data",
+          "attributes": {
+            "samplePercent": "100.0",
+            "rowCount": 333,
+            "sampleTime": "1525886767878"
+          }
+        },
+        "parameters": {
+          "transient_lastDdlTime": "1525885416",
+          "totalSize": "0",
+          "numRows": "0",
+          "rawDataSize": "0",
+          "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\"}",
+          "numFiles": "0"
+        },
+        "db": {
+          "guid": "d03d0347-839f-4154-9aa6-c735e40262ed",
+          "typeName": "hive_db"
+        },
+        "retention": 0,
+        "viewOriginalText": null
+      },
+      "guid": "67f8d256-4a5b-4da8-98fd-5e931269ec78",
+      "status": "ACTIVE",
+      "createdBy": "hrt_qa",
+      "updatedBy": "admin",
+      "createTime": 1525885416966,
+      "updateTime": 1525886767953,
+      "version": 0,
+      "classifications": [
+        {
+          "typeName": "test_dss_atlas_tag_fn3vd",
+          "attributes": {
+            "name": "val9",
+            "id": 9
+          }
+        }
+      ]
+    }
+  ]
+}

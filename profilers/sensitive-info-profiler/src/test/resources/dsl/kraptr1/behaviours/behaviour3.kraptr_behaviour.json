@@ -1,0 +1,10 @@
+{
+  "groupName": "group3",
+  "behaviours": [
+    {
+      "name": "not_matches",
+      "definition": "token!=\"not allowed\"",
+      "configurationType": "none"
+    }
+  ]
+}

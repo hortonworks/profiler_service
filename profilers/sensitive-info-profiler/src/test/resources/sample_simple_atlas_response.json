@@ -1,0 +1,34 @@
+
+{
+  "queryType": "DSL",
+  "queryText": "`hive_table` qualifiedName='hortoniabank.us_customers@cl1'",
+  "entities": [
+    {
+      "typeName": "hive_table",
+      "attributes": {
+        "owner": "admin",
+        "createTime": 1521171867000,
+        "qualifiedName": "hortoniabank.us_customers@cl1",
+        "name": "us_customers",
+        "description": null
+      },
+      "guid": "ae4037c1-c995-4f17-8bf4-72b8d8041a6f",
+      "status": "ACTIVE",
+      "displayText": "us_customers",
+      "classificationNames": [
+        "dp_age",
+        "dp_creditcard",
+        "dp_dob",
+        "dp_driverlicence",
+        "dp_email",
+        "dp_expirydate",
+        "dp_name",
+        "dp_npi",
+        "dp_routingnumber",
+        "dp_ssn",
+        "dp_telephone",
+        "test_tag"
+      ]
+    }
+  ]
+}

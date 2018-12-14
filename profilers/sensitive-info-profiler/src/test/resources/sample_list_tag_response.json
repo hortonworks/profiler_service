@@ -1,0 +1,296 @@
+
+{
+  "enumDefs": [],
+  "structDefs": [],
+  "classificationDefs": [
+    {
+      "category": "CLASSIFICATION",
+      "guid": "dd41e99b-79f5-4136-963d-62b645157b2a",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200518759,
+      "updateTime": 1521200518759,
+      "version": 1,
+      "name": "dp_ssn",
+      "description": "dp_ssn",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "ed14a300-14a1-4cb9-96d6-054616041380",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200481559,
+      "updateTime": 1521200481559,
+      "version": 1,
+      "name": "dp_name",
+      "description": "dp_name",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "e1cc4c93-a0e9-44ee-be08-b06dfd456f1f",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200518752,
+      "updateTime": 1521200518752,
+      "version": 1,
+      "name": "dp_ukpassportnumber",
+      "description": "dp_ukpassportnumber",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "a7e3c710-8d78-474c-9d1f-53f3bd94f810",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200481557,
+      "updateTime": 1521200481557,
+      "version": 1,
+      "name": "dp_swiftcode",
+      "description": "dp_swiftcode",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "fd787086-6da0-42dd-867c-5819557cd085",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200487673,
+      "updateTime": 1521200487673,
+      "version": 1,
+      "name": "dp_email",
+      "description": "dp_email",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "697a31ac-62d2-4ebd-94d5-d2a0f584cc01",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521698409024,
+      "updateTime": 1521698409024,
+      "version": 1,
+      "name": "test_tag",
+      "description": "test_tag",
+      "typeVersion": "1.0",
+      "attributeDefs": [
+        {
+          "name": "status",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        }
+      ],
+      "superTypes": []
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "8694e277-61bf-4272-9ebd-782dd5f6f5b4",
+      "createdBy": "atlas",
+      "updatedBy": "atlas",
+      "createTime": 1521023653259,
+      "updateTime": 1521023653259,
+      "version": 1,
+      "name": "TaxonomyTerm",
+      "description": "TaxonomyTerm",
+      "typeVersion": "1.0",
+      "attributeDefs": [
+        {
+          "name": "atlas.taxonomy",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        }
+      ],
+      "superTypes": []
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "346e4d04-4f32-4870-98a7-da11ecc9c8d5",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521095263413,
+      "updateTime": 1521095263413,
+      "version": 1,
+      "name": "dp",
+      "description": "dp",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": []
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "5c2e90f6-435a-4b1c-88e9-04bf64d3e5eb",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200518754,
+      "updateTime": 1521200518754,
+      "version": 1,
+      "name": "dp_npi",
+      "description": "dp_npi",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "d777824b-f662-4b51-8119-80ef32bcb29c",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200518747,
+      "updateTime": 1521200518747,
+      "version": 1,
+      "name": "dp_expirydate",
+      "description": "dp_expirydate",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "257af20c-bee0-4bb8-acd3-791ed92a2a23",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200487680,
+      "updateTime": 1521200487680,
+      "version": 1,
+      "name": "dp_telephone",
+      "description": "dp_telephone",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "4b7be211-99eb-4ac3-ad8e-6ee188200b14",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200487683,
+      "updateTime": 1521200487683,
+      "version": 1,
+      "name": "dp_creditcard",
+      "description": "dp_creditcard",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "02e849aa-5394-4412-b8d0-a83506e4f8d6",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200492363,
+      "updateTime": 1521200492363,
+      "version": 1,
+      "name": "dp_age",
+      "description": "dp_age",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "e23f7340-a6bf-4d6e-9eed-e19ad6ec5360",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200481551,
+      "updateTime": 1521200481551,
+      "version": 1,
+      "name": "dp_driverlicence",
+      "description": "dp_driverlicence",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "f8ba13cf-4e2d-4b70-b251-f87866e83f15",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200507179,
+      "updateTime": 1521200507179,
+      "version": 1,
+      "name": "dp_ipaddress",
+      "description": "dp_ipaddress",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "d7a08ccd-fbde-435e-a1bb-e5b01513da35",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200518757,
+      "updateTime": 1521200518757,
+      "version": 1,
+      "name": "dp_routingnumber",
+      "description": "dp_routingnumber",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    },
+    {
+      "category": "CLASSIFICATION",
+      "guid": "a0d657b9-3e21-49b9-88c8-0e3cdf54a6b0",
+      "createdBy": "admin",
+      "updatedBy": "admin",
+      "createTime": 1521200518750,
+      "updateTime": 1521200518750,
+      "version": 1,
+      "name": "dp_dob",
+      "description": "dp_dob",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": [
+        "dp"
+      ]
+    }
+  ],
+  "entityDefs": []
+}

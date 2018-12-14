@@ -1,0 +1,25 @@
+{
+  "groupName": "group1",
+  "profilerInstanceName": "sensitivityinstance",
+  "dsls": [
+    {
+      "matchType": "value",
+      "confidence": 80,
+      "dsl": "(regex_all(\"[\\\\s\\\\S]+\") and regex_all(\"[\\\\s\\\\S]+\")) and any(not_matches,not_matches) and all(not_matches,not_matches) or not_matches",
+      "tags": [
+        "tag1"
+      ],
+      "isEnabled": true
+    },
+    {
+      "matchType": "value",
+      "confidence": 80,
+      "dsl": "given(not_matches) choose not_matches otherwise not_matches",
+      "tags": [
+        "tag2"
+      ],
+      "isEnabled": true
+    }
+  ],
+  "isEnabled": true
+}

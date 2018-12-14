@@ -1,0 +1,15 @@
+{
+  "groupName": "group1",
+  "behaviours": [
+    {
+      "name": "regex_all",
+      "definition": "configs.forall(token matches)",
+      "configurationType": "list"
+    },
+    {
+      "name": "matchthis",
+      "definition": "token matches configs.head",
+      "configurationType": "list"
+    }
+  ]
+}

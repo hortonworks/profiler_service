@@ -1,0 +1,107 @@
+# HORTONWORKS DATAPLANE SERVICE AND ITS CONSTITUENT SERVICES
+#
+# (c) 2016-2018 Hortonworks, Inc. All rights reserved.
+#
+# This code is provided to you pursuant to your written agreement with Hortonworks, which may be the terms of the
+# Affero General Public License version 3 (AGPLv3), or pursuant to a written agreement with a third party authorized
+# to distribute this code.  If you do not have a written agreement with Hortonworks or with an authorized and
+# properly licensed third party, you do not have any rights to this code.
+# If this code is provided to you under the terms of the AGPLv3:
+# (A) HORTONWORKS PROVIDES THIS CODE TO YOU WITHOUT WARRANTIES OF ANY KIND;
+# (B) HORTONWORKS DISCLAIMS ANY AND ALL EXPRESS AND IMPLIED WARRANTIES WITH RESPECT TO THIS CODE, INCLUDING BUT NOT
+#   LIMITED TO IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE;
+# (C) HORTONWORKS IS NOT LIABLE TO YOU, AND WILL NOT DEFEND, INDEMNIFY, OR HOLD YOU HARMLESS FOR ANY CLAIMS ARISING
+#   FROM OR RELATED TO THE CODE; AND
+# (D) WITH RESPECT TO YOUR EXERCISE OF ANY RIGHTS GRANTED TO YOU FOR THE CODE, HORTONWORKS IS NOT LIABLE FOR ANY
+#   DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO,
+#   DAMAGES RELATED TO LOST REVENUE, LOST PROFITS, LOSS OF INCOME, LOSS OF BUSINESS ADVANTAGE OR UNAVAILABILITY,
+#   OR LOSS OR CORRUPTION OF DATA.
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET           /                                                   controllers.Profilers.indexAction
+#
+## Profiler
+GET           /profilers                                          controllers.Profilers.all
+GET           /profilers/:name                                    controllers.Profilers.getById(name : Long)
+POST          /profilers                                          controllers.Profilers.insert
+PUT           /profilers                                          controllers.Profilers.update
+
+GET           /profilerinstances                                  controllers.ProfilerInstances.all
+GET           /profilerinstances/:name                            controllers.ProfilerInstances.getByName(name : String)
+POST          /profilerinstances                                  controllers.ProfilerInstances.insert
+PUT           /profilerinstances                                  controllers.ProfilerInstances.update
+PUT           /profilerinstances/state                            controllers.ProfilerInstances.updateState(name: String, active : Boolean)
+PUT           /profilerinstanceswithselectorconfig                controllers.ProfilerInstances.updateProfilerInstanceAndSelector(overwrite : Option[Boolean])
+PUT           /profilerinstanceswithselectorconfig/bulk           controllers.ProfilerInstances.updateProfilerInstanceAndSelectorBulk(overwrite: Option[Boolean])
+
+GET           /selectors                                          controllers.AssetSelectorDefinitions.all
+POST          /selectors                                          controllers.AssetSelectorDefinitions.insert
+PUT           /selectors                                          controllers.AssetSelectorDefinitions.update
+PUT           /selectors/:name/config                             controllers.AssetSelectorDefinitions.updateConfig(name : String, overwrite : Option[Boolean])
+
+#GET           /jobs/assetjob                 controllers.ProfilerJobs.getLastStatus(assetId:String,profilerName:String)
+#GET           /jobs/assetjobs                controllers.ProfilerJobs.getLastStatusForSeq(assetIds:String,profilerName:String)
+#
+## Jobs
+POST          /jobs                                               controllers.ProfilerJobs.startJob
+GET           /jobs                                               controllers.ProfilerJobs.getAllJobs(skip : Long, limit : Long,  submitter: Option[String], scheduled: Option[Boolean])
+GET           /jobs/:id                                           controllers.ProfilerJobs.status(id:Long)
+DELETE        /jobs/:id                                           controllers.ProfilerJobs.kill(id:Long)
+#
+
+# Metrics
+POST          /asset                                              controllers.InteractiveMetrics.assets(action:String)
+
+POST          /assetmetrics                                       controllers.InteractiveMetrics.getOrSubmitInteractiveQuery()
+POST          /asset/metrics                                      controllers.InteractiveMetrics.submitInteractiveQuery()
+GET           /asset/metrics/status                               controllers.InteractiveMetrics.status(sessionType : String)
+POST          /cache/metrics                                      controllers.InteractiveMetrics.cacheMetrics()
+
+#
+## Assets
+#POST          /assets                        controllers.AssetApi.handleAssets
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                                       controllers.Assets.versioned(path="/public", file: Asset)
+
+#Dataset-Asset
+POST          /datasetasset                                       controllers.Datasets.saveOrUpdate
+GET           /datasetasset                                       controllers.Datasets.getAll
+DELETE        /datasetasset/:dsname                               controllers.Datasets.deleteByDatasetName(dsname: String)
+GET           /datasetasset/:dsname                               controllers.Datasets.getByDsName(dsname: String)
+GET           /datasetasset/assetcount/:dsname                    controllers.Datasets.getProfilerDatasetAssetCount(dsname: String, profilerinstancename:String, startTime: Long, endTime: Long)
+
+POST          /assets/tags                                        controllers.Datasets.saveTagsOnHDFS
+GET           /assets                                             controllers.Datasets.getExistingProfiledAssetCount(profilerName: String)
+
+#ProfilerJobs
+GET           /profilerjobs/assetscount                           controllers.ProfilerJobs.getAssetsCount(startTime: Long, endTime: Long)
+GET           /profilerjobs/jobscount                             controllers.ProfilerJobs.getJobCounts(startTime: Long, endTime: Long)
+GET           /profilerjobs                                       controllers.ProfilerJobs.getJobsOnFilters(startTime: Option[Long], endTime: Option[Long], status: Seq[String], profilerIds: Seq[Long], offset: Option[Int], limit: Option[Int], sortBy: Option[String], sortDir: Option[String])
+
+#AssetJobHistory
+GET           /assetjobhistories/assetcounts                      controllers.AssetJobHistories.getOperatedAssetsCountPerDay(profilerName: String, startTime: Long, endTime: Long)
+GET           /assetjobhistories                                  controllers.AssetJobHistories.getAll
+GET           /assetjobhistories/:assetid/profilerslastrun        controllers.AssetJobHistories.getProfilersLastRunInfoOnAsset(assetid: String)
+
+#IncrementalChangeDetectors
+#GET           /incrementalchangedetectors/changelogs              controllers.IncrementalChangeDetectors.getAllChanges(startTime: Option[Long], endTime: Option[Long])
+#POST          /incrementalchangedetectors/startdetector           controllers.IncrementalChangeDetectors.startChangeDetector()
+
+
+#MetaConfigurationManagement
+GET           /metaconfig/list                                    controllers.MetaConfigurationManagement.listNodes(instance: Option[String],profilerId: String, id: String, startsWith: Option[String])
+GET           /metaconfig/read                                    controllers.MetaConfigurationManagement.readNodeContent(instance: Option[String],profilerId: String, id: String, nodeName: String)
+PUT           /metaconfig/overwrite                               controllers.MetaConfigurationManagement.overWriteNodeContent(instance: Option[String],profilerId: String, id: String, nodeName: String)
+PUT           /metaconfig/create                                  controllers.MetaConfigurationManagement.createNode(instance: Option[String],profilerId: String, id: String, nodeName: String)
+POST          /metaconfig/upload                                  controllers.MetaConfigurationManagement.uploadNode(instance: Option[String],profilerId: String, id: String, nodeName: String)
+DELETE        /metaconfig/delete                                  controllers.MetaConfigurationManagement.deleteNode(instance: Option[String],profilerId: String, id: String, nodeName: String)
+POST          /metaconfig/info                                    controllers.MetaConfigurationManagement.getNodeInfo()
+
+#DryRunManagement
+POST          /dryrun/launch                                      controllers.DryRunManager.triggerDryRun()
+GET           /dryrun/:id                                         controllers.DryRunManager.getDryRun(id: Long)
+DELETE        /dryrun/:id                                         controllers.DryRunManager.clearDryRun(id: Long)
